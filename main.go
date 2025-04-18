@@ -202,7 +202,6 @@ func main() {
         // Decode mode
         // Remove possible prefix/suffix
         input := strings.TrimPrefix(strings.TrimSuffix(args[0], ".exe"), "rustdesk-licensed-")
-        input = strings.ReplaceAll(input, "-licensed-", "")
 
         lic, err := getCustomServerFromConfigString(input, publicKey)
         if err != nil {
